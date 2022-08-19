@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run crawl && node index.js",
     "precrawl": "rm -rf data.txt",
-    "crawl": "./crawl.sh "
+    "crawl": "./crawl.sh"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/matan-co/great-walks-snitcher#readme",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "twilio": "^3.80.1"
   }
 }
