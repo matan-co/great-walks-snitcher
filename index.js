@@ -10,10 +10,10 @@ function keplerLuxmore() {
 
 async function main() {
     const data = keplerLuxmore();
-    sendDataToTwilio(data)
+    await sendDataToTwilio(data)
 }
 
-function sendDataToTwilio(data) {
+async function sendDataToTwilio(data) {
     const accountSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
     client.messages.create({
