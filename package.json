@@ -1,0 +1,25 @@
+{
+  "name": "great-walks-snitcher",
+  "version": "1.0.0",
+  "description": "This Github repository checks weather New Zealand Great Walks huts are available",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run crawl && node index.js",
+    "precrawl": "rm -rf data.txt",
+    "crawl": "./crawl.sh "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matan-co/great-walks-snitcher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matan-co/great-walks-snitcher/issues"
+  },
+  "homepage": "https://github.com/matan-co/great-walks-snitcher#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
