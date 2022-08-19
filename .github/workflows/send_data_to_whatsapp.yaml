@@ -7,15 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Send data to whatsapp
-        with:
-          env:
-            - name: DATA
-              value: $DATA
-            - name: TO
-              value: $TO
-            - name: FROM
-              value: $FROM
-
-        run:
-        | 
-        echo matan
+        env:
+          DATA: matan
+        run: | 
+          echo matan
