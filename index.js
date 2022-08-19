@@ -1,4 +1,6 @@
 var fs = require('fs');
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 function keplerLuxmore() {
@@ -14,8 +16,7 @@ async function main() {
 }
 
 async function sendDataToTwilio(data) {
-    const accountSid = process.env.TWILIO_ACCOUNT_SID;
-    const authToken = process.env.TWILIO_AUTH_TOKEN;
+
     client.messages.create({
         body: data,
         from: process.env.TWILIO_PHONE_NUMBER,
