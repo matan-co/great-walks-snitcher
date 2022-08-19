@@ -13,4 +13,4 @@ jobs:
           TWILIO_PHONE_NUMBER: asd
           MY_PHONE_NUMBER: asd
         run: |
-          npm start
+          npm install && npm start
