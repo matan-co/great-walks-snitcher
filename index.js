@@ -19,8 +19,8 @@ async function main() {
 async function sendDataToTwilio(data) {
     client.messages.create({
         body: JSON.stringify(data),
-        from: process.env.TWILIO_PHONE_NUMBER,
-        to: process.env.MY_PHONE_NUMBER
+        from: 'whatsapp:' + process.env.TWILIO_PHONE_NUMBER,
+        to: 'whatsapp:' + process.env.MY_PHONE_NUMBER
     });
 }
 
