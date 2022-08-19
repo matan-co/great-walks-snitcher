@@ -16,7 +16,6 @@ async function main() {
 }
 
 async function sendDataToTwilio(data) {
-
     client.messages.create({
         body: data,
         from: process.env.TWILIO_PHONE_NUMBER,
