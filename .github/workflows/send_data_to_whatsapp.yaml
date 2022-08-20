@@ -1,6 +1,5 @@
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  pull_request:
 jobs:
   send_data_to_whatsapp:
     runs-on: ubuntu-latest
