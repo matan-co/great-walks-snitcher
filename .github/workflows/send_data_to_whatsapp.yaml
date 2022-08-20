@@ -1,0 +1,17 @@
+on:
+  pull_request:
+  schedule:
+    - cron: "0 10 * * *"
+jobs:
+  send_data_to_whatsapp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send data to whatsapp
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
+          TWILIO_PHONE_NUMBER: ${{ secrets.TWILIO_PHONE_NUMBER }}
+          MY_PHONE_NUMBER: ${{ secrets.MY_PHONE_NUMBER }}
+        run: |
+          npm install && npm start
