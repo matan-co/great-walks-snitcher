@@ -1,7 +1,7 @@
 on:
   pull_request:
   schedule:
-    - cron: "0 10 * * *"
+    - cron: "16 * * * *"
 jobs:
   send_data_to_whatsapp:
     runs-on: ubuntu-latest
