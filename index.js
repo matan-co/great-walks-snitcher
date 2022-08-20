@@ -13,7 +13,7 @@ function keplerLuxmore() {
 
 async function main() {
     const data = keplerLuxmore();
-    // await sendDataToTwilio(data)
+    await sendDataToTwilio(data);
 }
 
 async function sendDataToTwilio(data) {
